@@ -5,10 +5,16 @@ import ReactDOM from "react-dom/client";
 // React Router
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 
+// Components
+import Root from "./components/routes/Root";
+
+// CSS
+import "./assets/css/index.css";
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello Root Route!</div>,
+    element: <Root />,
   },
   {
     path: "/search",
