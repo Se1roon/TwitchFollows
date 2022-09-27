@@ -1,0 +1,49 @@
+.header {
+  padding: 0.4rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header.row {
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.header.column {
+  flex-direction: column;
+}
+
+.header-item1,
+.header-item2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 640px) {
+  .header {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1040px) {
+  .header {
+    padding: 1rem 2.5rem;
+  }
+}
+
+.header-heading a {
+  color: var(--clr-accent);
+  text-shadow: 0 0 6px var(--clr-accent);
+}
+
+.header-heading {
+  transition: transform 200ms ease;
+}
+
+.header-heading:hover,
+.header-heading:focus {
+  transform: skew(-20deg) skewY(-5deg);
+}
