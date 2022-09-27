@@ -35,6 +35,7 @@
 }
 
 .header-heading a {
+  font-size: 1.7rem;
   color: var(--clr-accent);
   text-shadow: 0 0 6px var(--clr-accent);
 }
@@ -46,4 +47,37 @@
 .header-heading:hover,
 .header-heading:focus {
   transform: skew(-20deg) skewY(-5deg);
+}
+
+.header-git {
+  height: 25px;
+  transform: translateY(5px);
+}
+
+.header-git svg {
+  height: 100%;
+  border-radius: 100%;
+}
+
+.header-git path {
+  transition: all 300ms ease;
+}
+
+.header-git:hover path,
+.header-git:focus path {
+  fill: var(--clr-accent);
+}
+
+.header-git:hover svg {
+  box-shadow: 0 0 20px var(--clr-accent);
+}
+
+@media screen and (min-width: 640px) {
+  .header-heading a {
+    font-size: 2rem;
+  }
+
+  .header-git {
+    height: 35px;
+  }
 }
