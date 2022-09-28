@@ -22,7 +22,7 @@ const Root = () => {
             href="https://github.com/Se1roon/TwitchFollows"
           >
             <FontAwesomeIcon icon={faGithub} />
-          </a> //TODO: Change this to github icon
+          </a>
         }
       />
       <div>Hero component</div>
