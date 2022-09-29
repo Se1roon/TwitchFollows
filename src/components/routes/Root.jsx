@@ -3,12 +3,11 @@ import Header from "../Header";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import Hero from "../Hero";
 
 const Root = () => {
   return (
     <>
-      {/* <Header />
-      <Hero /> */}
       <Header
         row={true}
         item1Content={
@@ -25,7 +24,7 @@ const Root = () => {
           </a>
         }
       />
-      <div>Hero component</div>
+      <Hero />
     </>
   );
 };

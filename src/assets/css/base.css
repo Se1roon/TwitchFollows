@@ -3,6 +3,7 @@
   --clr-accent: hsl(280 40% 50%);
 
   --clr-font-normal: hsl(0 0% 100%);
+  --clr-font-darker: hsl(0 0% 100% / 0.8);
 }
 
 *,
