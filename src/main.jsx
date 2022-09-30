@@ -10,15 +10,28 @@ import Root from "./components/routes/Root";
 
 // CSS
 import "./assets/css/index.css";
+import Hero from "./components/Hero";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-  },
-  {
-    path: "/search",
-    element: <div>Hello Search Route!</div>,
+    children: [
+      {
+        index: true,
+        element: <Hero />,
+      },
+      {
+        path: "search",
+        element: <div>Hello Search Route!</div>,
+        children: [
+          {
+            path: ":username",
+            element: <div>USERNAMEROUTE</div>,
+          },
+        ],
+      },
+    ],
   },
 ]);
 
