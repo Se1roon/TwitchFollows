@@ -41,6 +41,7 @@
 }
 
 .header-heading {
+  font-family: "Ubuntu", sans-serif;
   transition: transform 200ms ease;
 }
 

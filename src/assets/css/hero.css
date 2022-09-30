@@ -29,6 +29,7 @@
 }
 
 .hero .header-item1 {
+  font-family: "Ubuntu", sans-serif;
   font-size: 1.2rem;
   position: relative;
 }
@@ -42,6 +43,7 @@
 }
 
 .hero .header-item2 {
+  font-family: "Open Sans", sans-serif;
   color: var(--clr-font-darker);
   width: min(40rem, 100%);
 }
