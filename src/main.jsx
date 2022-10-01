@@ -10,9 +10,12 @@ import Root from "./components/routes/Root";
 import Hero from "./components/Hero";
 import App from "./components/routes/App";
 
+import { loader as followsLoader } from "./components/routes/Follows";
+
 // CSS
 import "./assets/css/index.css";
 import ErrorPage from "./components/ErrorPage";
+import Follows from "./components/routes/Follows";
 
 const router = createBrowserRouter([
   {
@@ -30,7 +33,8 @@ const router = createBrowserRouter([
         children: [
           {
             path: ":username",
-            element: <div>USERNAMEROUTE</div>,
+            element: <Follows />,
+            loader: followsLoader,
           },
         ],
       },
