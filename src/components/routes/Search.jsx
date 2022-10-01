@@ -1,4 +1,5 @@
 import Header from "../Header";
+import InputGroup from "../InputGroup";
 
 const Search = () => {
   return (
@@ -8,11 +9,7 @@ const Search = () => {
           Enter the <span>username</span>
         </h2>
       }
-      item2Content={
-        <div className="input-group">
-          <input type="text" />
-        </div>
-      }
+      item2Content={<InputGroup />}
     />
   );
 };
