@@ -20,7 +20,7 @@ const Hero = () => {
           </p>
         }
       />
-      <Button text={"Let's start"} useLink={true} link={true} />
+      <Button text={"Let's start"} url={"/search"} useLink={true} link={true} />
       <Footer />
     </section>
   );
