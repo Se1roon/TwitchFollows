@@ -1,0 +1,12 @@
+.input {
+  color: var(--clr-font-normal);
+  text-align: center;
+  background: transparent;
+  width: 100%;
+  outline: 0;
+  border: 2px solid var(--clr-accent);
+  border-radius: 1rem;
+  padding: 0.2rem 0.6rem;
+  white-space: nowrap;
+  letter-spacing: 1.2px;
+}
