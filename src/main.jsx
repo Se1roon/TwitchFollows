@@ -12,11 +12,13 @@ import App from "./components/routes/App";
 
 // CSS
 import "./assets/css/index.css";
+import ErrorPage from "./components/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,

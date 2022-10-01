@@ -2,6 +2,7 @@
 
 @import url(normalize.css);
 @import url(base.css);
+@import url(error.css);
 @import url(header.css);
 @import url(buttons.css);
 @import url(hero.css);
