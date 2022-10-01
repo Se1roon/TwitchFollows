@@ -1,6 +1,7 @@
 import createHeaders from "./createHeaders";
 
 export default async function getUserFollows(
+  clientId,
   userId,
   authorizationObj,
   pagination = ""
@@ -13,7 +14,7 @@ export default async function getUserFollows(
     token_type.substring(0, 1).toUpperCase() +
     token_type.substring(1, token_type.length);
 
-  const headers = createHeaders(token_type, access_token);
+  const headers = createHeaders(token_type, access_token, clientId);
 
   return fetch(endpoint, { headers })
     .then((res) => res.json())
