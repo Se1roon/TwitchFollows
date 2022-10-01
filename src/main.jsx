@@ -7,10 +7,11 @@ import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 
 // Components
 import Root from "./components/routes/Root";
+import Hero from "./components/Hero";
+import App from "./components/routes/App";
 
 // CSS
 import "./assets/css/index.css";
-import Hero from "./components/Hero";
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: "search",
-        element: <div>Hello Search Route!</div>,
+        element: <App />,
         children: [
           {
             path: ":username",

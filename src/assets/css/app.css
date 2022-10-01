@@ -1,0 +1,19 @@
+.app {
+  margin-top: 4rem;
+}
+
+.app .header {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 0.9rem;
+}
+
+.app .header span {
+  color: var(--clr-accent);
+  text-shadow: 0 0 4px var(--clr-accent);
+}
+
+@media screen and (min-width: 580px) {
+  .app .header {
+    font-size: 1.2rem;
+  }
+}
