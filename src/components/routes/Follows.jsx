@@ -5,6 +5,7 @@ import getData from "../../data";
 import getPages from "./../../utils/getPages";
 import { useState } from "react";
 import FollowEntry from "../FollowEntry";
+import FollowButtons from "../FollowButtons";
 
 export async function loader({ params }) {
   const username = params.username;
@@ -27,7 +28,17 @@ const Follows = () => {
     return { time, day };
   };
 
-  console.log(follows);
+  const handleButtonClick = (e) => {
+    const className = e.target.className;
+
+    if (className === "two" && page + 1 <= Object.keys(follows).length) {
+      setPage(page + 1);
+      return;
+    }
+
+    if (className === "one" && page > 1) setPage(page - 1);
+  };
+
   return (
     <section className="follows">
       <div className="follows-body">
