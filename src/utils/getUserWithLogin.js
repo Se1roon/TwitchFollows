@@ -14,7 +14,7 @@ export default async function getUserWithLogin(
     token_type.substring(1, token_type.length);
 
   const headers = createHeaders(token_type, access_token, clientId);
-  console.log(headers);
+
   return fetch(endpoint, { headers })
     .then((res) => res.json())
     .then((data) => data);

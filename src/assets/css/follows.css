@@ -1,4 +1,4 @@
-.follows {
+.follows .follows-body {
   margin-top: 6rem;
   margin-inline: max(4rem, 20%);
   display: grid;
@@ -53,14 +53,59 @@
 }
 
 @media screen and (min-width: 640px) {
-  .follows {
+  .follows .follows-body {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media screen and (min-width: 1040px) {
-  .follows {
+  .follows .follows-body {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
   }
+}
+
+.follow-buttons {
+  margin-block: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.follow-buttons .btn1,
+.follow-buttons .btn2 {
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+}
+
+.follow-buttons .btn2 div {
+  clip-path: polygon(
+    0% 20%,
+    60% 20%,
+    60% 0%,
+    100% 50%,
+    60% 100%,
+    60% 80%,
+    0% 80%
+  );
+}
+
+.follow-buttons .btn1 div {
+  clip-path: polygon(
+    40% 0%,
+    40% 20%,
+    100% 20%,
+    100% 80%,
+    40% 80%,
+    40% 100%,
+    0% 50%
+  );
+}
+
+.follow-buttons .btn1 div,
+.follow-buttons .btn2 div {
+  aspect-ratio: 1;
+  background-color: var(--clr-accent);
 }

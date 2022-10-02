@@ -30,9 +30,12 @@ const Follows = () => {
   console.log(follows);
   return (
     <section className="follows">
-      {follows[page].map((entry, index) => {
-        return <FollowEntry entry={entry} key={index * page} />;
-      })}
+      <div className="follows-body">
+        {follows[page].map((entry, index) => {
+          return <FollowEntry entry={entry} key={index * page} />;
+        })}
+      </div>
+      <FollowButtons onClick={handleButtonClick} />
     </section>
   );
 };
