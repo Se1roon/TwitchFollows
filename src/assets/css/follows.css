@@ -1,0 +1,66 @@
+.follows {
+  margin-top: 6rem;
+  margin-inline: max(4rem, 20%);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  /* grid-template-columns: repeat(3, 1fr);
+  gap: 2rem; */
+}
+
+.follows .entry,
+.follows .entry-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.follows .entry {
+  border-radius: 1em;
+  padding-block: 1rem;
+  border: 2px solid var(--clr-accent);
+  box-shadow: 0 0 15px var(--clr-accent);
+  transition: transform 300ms linear;
+}
+
+.follows .entry:hover,
+.follows .entry:focus {
+  transform: scale(1.01);
+}
+
+.follows .entry p {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+
+.follows .entry-img {
+  width: 40%;
+  border-radius: 1em;
+  margin-bottom: 1rem;
+}
+
+.follows .entry-name {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.15rem;
+  text-shadow: 0 0 1rem var(--clr-accent);
+  margin-bottom: 0.2rem;
+}
+
+.follows .entry-name a:hover,
+.follows .entry-name a:focus {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 640px) {
+  .follows {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1040px) {
+  .follows {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
