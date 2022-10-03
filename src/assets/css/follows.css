@@ -35,6 +35,7 @@
 }
 
 .follows .entry-img {
+  aspect-ratio: 1;
   width: 40%;
   border-radius: 1em;
   margin-bottom: 1rem;
