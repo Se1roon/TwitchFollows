@@ -7,6 +7,8 @@ const FollowEntry = ({ entry }) => {
     return { time, day };
   };
 
+  if (!entry) return null;
+
   return (
     <div className="entry">
       <img

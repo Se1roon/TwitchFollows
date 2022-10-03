@@ -8,7 +8,7 @@ export default async function getFollows(username, authorizationObj, clientId) {
 
   let userFollows = [];
 
-  while (true) {
+  while (user.data.length !== 0) {
     const follows = currentPaginate
       ? await getUserFollows(
           clientId,
@@ -23,4 +23,6 @@ export default async function getFollows(username, authorizationObj, clientId) {
 
     if (!currentPaginate) return userFollows;
   }
+
+  return null;
 }

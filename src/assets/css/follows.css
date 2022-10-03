@@ -109,3 +109,11 @@
   aspect-ratio: 1;
   background-color: var(--clr-accent);
 }
+
+.follows.error .follows-body {
+  font-size: 1.4rem;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

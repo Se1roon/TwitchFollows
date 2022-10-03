@@ -13,12 +13,24 @@ export async function loader({ params }) {
   const authObj = await getTwitchAuth(clientId, clientSecret);
   const follows = await getFollows(username, authObj, clientId);
 
+  if (!follows) return [follows, authObj];
   return [getPages(follows, pageSize), authObj];
 }
 
 const Follows = () => {
   const [page, setPage] = useState(1);
   const [follows, authObj] = useLoaderData();
+
+  console.log(follows);
+  if (!follows) {
+    return (
+      <section className="follows error">
+        <div className="follows-body">
+          <p>The user with this username does not exist.</p>
+        </div>
+      </section>
+    );
+  }
 
   const getDate = (startTime) => {
     const date = new Date(startTime);
