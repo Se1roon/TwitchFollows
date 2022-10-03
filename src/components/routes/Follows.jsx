@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigation } from "react-router-dom";
 import getFollows from "../../utils/getFollows";
 import getTwitchAuth from "../../utils/getTwitchAuth";
 import getData from "../../data";
@@ -20,6 +20,8 @@ export async function loader({ params }) {
 const Follows = () => {
   const [page, setPage] = useState(1);
   const [follows, authObj] = useLoaderData();
+
+  const navigation = useNavigation();
 
   console.log(follows);
   if (!follows) {
@@ -52,7 +54,9 @@ const Follows = () => {
   };
 
   return (
-    <section className="follows">
+    <section
+      className={navigation.state === "loading" ? "follows loading" : "follows"}
+    >
       <div className="follows-body">
         {follows[page].map((entry, index) => {
           return <FollowEntry entry={entry} key={index * page} />;
