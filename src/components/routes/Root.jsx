@@ -19,6 +19,7 @@ const Root = () => {
           <a
             className="header-git"
             href="https://github.com/Se1roon/TwitchFollows"
+            target="_blank"
           >
             <FontAwesomeIcon icon={faGithub} />
           </a>
