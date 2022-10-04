@@ -2,7 +2,7 @@ import { useLoaderData, useNavigation } from "react-router-dom";
 import getTwitchAuth from "../../utils/getTwitchAuth";
 import getData from "../../data";
 import getPages from "./../../utils/getPages";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import FollowEntry from "../FollowEntry";
 import FollowButtons from "../FollowButtons";
 import getUsers from "../../utils/getUsers";
@@ -13,12 +13,12 @@ export async function loader({ params }) {
 
   const follows = await getUsers(params.username, authObj, clientId);
 
-  return [getPages(follows, pageSize), authObj, clientId];
+  return [getPages(follows, pageSize), authObj, clientId, params.username];
 }
 
 const Follows = () => {
   const [page, setPage] = useState(1);
-  const [follows, authObj, clientId] = useLoaderData();
+  const [follows, authObj, clientId, username] = useLoaderData();
   const navigation = useNavigation();
 
   if (!follows) {
@@ -41,6 +41,10 @@ const Follows = () => {
 
     if (className === "one" && page > 1) setPage(page - 1);
   };
+
+  useEffect(() => {
+    document.querySelector(".app .input").value = username;
+  }, [username]);
 
   return (
     <section
