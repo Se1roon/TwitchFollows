@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import Header from "../Header";
-import InputGroup from "../InputGroup";
+import Header from "./Header";
+import InputGroup from "./InputGroup";
 
 const Search = () => {
   return (
