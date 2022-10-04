@@ -82,3 +82,16 @@
     height: 35px;
   }
 }
+
+@keyframes loading-anim {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.4;
+  }
+}
+
+.header .loading {
+  animation: loading-anim 1s infinite alternate;
+}

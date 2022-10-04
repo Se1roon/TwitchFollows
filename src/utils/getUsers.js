@@ -1,5 +1,3 @@
-import getData from "../data";
-import getTwitchAuthorization from "./getTwitchAuth";
 import createHeaders from "./createHeaders";
 import getUserWithId from "./getUserWithId";
 import getFollows from "./getFollows";
