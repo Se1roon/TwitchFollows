@@ -1,11 +1,11 @@
 import { useLoaderData, useNavigation } from "react-router-dom";
-import getTwitchAuth from "../../utils/getTwitchAuth";
-import getData from "../../data";
+import getTwitchAuth from "./../../utils/getTwitchAuth";
+import getData from "./../../data";
 import getPages from "./../../utils/getPages";
 import { useState, useEffect } from "react";
-import FollowEntry from "../FollowEntry";
-import FollowButtons from "../FollowButtons";
-import getUsers from "../../utils/getUsers";
+import FollowEntry from "./../FollowEntry";
+import FollowButtons from "./../FollowButtons";
+import getUsers from "./../../utils/getUsers";
 
 export async function loader({ params }) {
   const { clientId, clientSecret, pageSize } = getData();
